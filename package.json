@@ -12,6 +12,8 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@primevue/themes": "^4.2.1",
+    "primevue": "^4.2.1",
     "sass": "^1.80.6",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
