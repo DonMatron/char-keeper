@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import { useBreakpoint } from '../hooks/UseBreakpoint';
+import HomeDashboard from '../components/HomeDashboard.vue';
+import HomeTabs from '../components/HomeTabs.vue';
 
 const isDoubleMode = useBreakpoint(import.meta.env.VITE_DOUBLE_MODE);
 const isTripleMode = useBreakpoint(import.meta.env.VITE_TRIPLE_MODE);
@@ -14,32 +16,17 @@ onMounted(() => {
   <main>
     <TransitionGroup>
 
-      <div v-if="isDoubleMode" class="Container ContainerLeft" key="left">
+      <div v-if="isDoubleMode" class="Container Left" key="left">
         <h1>Left</h1>
-        <div class="Text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.
-        </div>
       </div>
 
-      <div class="Container ContainerMiddle"  key="middle">
-        <h1>Middle</h1>
+      <div class="Middle" key="middle">
+        <HomeDashboard />
+        <HomeTabs />
       </div>
 
-      <div v-if="isTripleMode" class="Container ContainerRight"  key="right">
+      <div v-if="isTripleMode" class="Container Right" key="right">
         <h1>Right</h1>
-        <div class="Text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.
-        </div>
       </div>
 
     </TransitionGroup>
@@ -47,17 +34,18 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+h1 {
+  text-align: center;
+}
+
 main {
+  //Common styling
   height: 100vh;
   width: 100vw;
-  padding: 1em;
+  padding: 1rem;
   overflow: hidden;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: flex-end;
-
+  //Smooth transitions
   .v-enter-active,
   .v-leave-active {
     transition: opacity .3s ease;
@@ -68,46 +56,50 @@ main {
     opacity: 0;
   }
 
-  .Container {
-    margin-left: 1em;
-    background: #ffffff05;
-    border-radius: 1em;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: stretch;
+  //Flexbox
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: flex-end;
+}
 
-    &Left {
-      flex-basis: 20%;
-      //flex-shrink: 1;
-      flex-grow: 1;
-    }
+.Container {
+  background: #ffffff05;
+  padding: 1rem;
+  border: .1rem solid #ffffff07;
+  border-radius: 1rem;
+}
 
-    &Middle {
-      flex-basis: 50%;
-      //flex-shrink: 1;
-      flex-grow: 1;
+//Main flexbox child elements
+.Left {
+  flex-basis: 20%;
+  flex-grow: 1;
+}
 
-    }
+.Middle {
+  flex-basis: 50%;
+  flex-grow: 2;
 
-    &Right {
-      flex-basis: 20%;
-      //flex-shrink: 1;
-      flex-grow: 1;
-    }
+  margin-left: 1rem;
 
-    h1 {
-      text-align: center;
-    }
+  //Flexbox
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
 
-    .Text {
-      //width: 10em;
-    }
+.Right {
+  flex-basis: 20%;
+  flex-grow: 1;
 
-    &:first-of-type {
-      margin-left: 0em;
-    }
-  }
+  margin-left: 1rem;
+}
+
+//Middle flexbox child elements
+
+.Tabs {
+  flex-basis: 100%;
+
+  margin-left: 1rem;
 }
 </style>
