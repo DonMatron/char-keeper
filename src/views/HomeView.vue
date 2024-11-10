@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
 import { useBreakpoint } from '../hooks/UseBreakpoint';
 import HomeDashboard from '../components/HomeDashboard.vue';
 import HomeTabs from '../components/HomeTabs.vue';
@@ -7,9 +6,6 @@ import HomeTabs from '../components/HomeTabs.vue';
 const isDoubleMode = useBreakpoint(import.meta.env.VITE_DOUBLE_MODE);
 const isTripleMode = useBreakpoint(import.meta.env.VITE_TRIPLE_MODE);
 
-onMounted(() => {
-  useBreakpoint(0);
-});
 </script>
 
 <template>
