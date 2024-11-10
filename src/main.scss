@@ -4,10 +4,7 @@
   --color-text: #EADADA;
   --gradient-background: linear-gradient(160deg, #242328 -20%, #0a090f 90%);
 
-  //Screen constants
-  --xs-max: 480px;  //Max for phones
-  --sm-max: 780px;  //Max for Tabs or halfscreen
-  --md-max: 1080px; //Max for FullHD
+  --dashboard-width: 15rem;
 }
 
 *,
@@ -25,4 +22,11 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.Container {
+  background: #ffffff05;
+  padding: 1rem;
+  border: .1rem solid #ffffff07;
+  border-radius: 1rem;
 }

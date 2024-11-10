@@ -59,13 +59,6 @@ main {
   align-content: flex-end;
 }
 
-.Container {
-  background: #ffffff05;
-  padding: 1rem;
-  border: .1rem solid #ffffff07;
-  border-radius: 1rem;
-}
-
 //Main flexbox child elements
 .Left {
   flex-basis: 20%;
