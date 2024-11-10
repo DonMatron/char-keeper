@@ -11,7 +11,10 @@ interface CharacterInfo {
   proficiency: number,
   speed: number,
   darkvision: number,
-  inspirations: number
+  inspirations: number,
+  currentHp: number,
+  maxHp: number,
+  tempHp: number
 }
 
 const character: CharacterInfo = {
@@ -23,7 +26,10 @@ const character: CharacterInfo = {
   proficiency: 2,
   speed: 6,
   darkvision: 20,
-  inspirations: 3
+  inspirations: 3,
+  currentHp: 999,
+  maxHp: 999,
+  tempHp: 0
 };
 
 export const useCharacterStore = defineStore({

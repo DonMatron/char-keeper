@@ -9,8 +9,8 @@ const props = defineProps<{
 <template>
   <div class="Badge Container">
     <img v-if="props.image" :src="image!" />
-    <h1 class="Value">{{ props.value }}</h1>
-    <h1 class="Text">{{ props.text }}</h1>
+    <div class="Value">{{ props.value }}</div>
+    <div class="Text">{{ props.text }}</div>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ const props = defineProps<{
 .Badge {
   overflow: hidden;
   position: relative;
-  padding: .5rem;
+  padding: .4rem;
 }
 
 img {
@@ -46,8 +46,8 @@ img {
   font-family: Oswald;
   font-weight: 400;
   text-align: center;
-  font-size: 1.2rem;
-  color: #bbbbbb;
+  font-size: 1rem;
+  color: #bababa;
   text-shadow: 0 0 1rem #000000;
 }
 </style>
