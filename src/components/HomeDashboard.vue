@@ -2,6 +2,7 @@
 import HomeDashboardImage from './HomeDashboardImage.vue';
 import HomeDashboardBadge from './HomeDashboardBadge.vue';
 import HomeDashboardHp from './HomeDashboardHp.vue';
+import HomeDashboardConditions from './HomeDashboardConditions.vue';
 import { useCharacterStore } from '../store.js';
 import { BadgeIcons } from '../assets/BadgeAssets';
 
@@ -57,16 +58,30 @@ const badges = [
       </div>
     </div>
     <HomeDashboardHp :current="character.currentHp" :maximal="character.maxHp" :temporary="character.tempHp" />
+    <HomeDashboardConditions />
   </div>
 </template>
 
 <style lang="scss" scoped>
 .Dashboard {
   width: var(--dashboard-width);
+  display: flex;
+  flex-direction: column;
+
+  >* {
+    margin-top: 1rem;
+  }
+
+  >*:first-of-type {
+    margin-top: 0;
+  }
+
+  > :last-of-type {
+    flex-grow: 1;
+  }
 }
 
 .BadgesGrid {
-  margin-block: 1rem;
   width: var(--dashboard-width);
   display: grid;
   grid-template-columns: repeat(2, 1fr);

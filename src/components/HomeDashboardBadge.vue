@@ -27,10 +27,10 @@ img {
   display: block;
   object-fit: cover;
   height: 60%;
-  opacity: .1;
+  opacity: .2;
 
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
 }
 
@@ -39,7 +39,7 @@ img {
   font-weight: 600;
   text-align: center;
   font-size: 2rem;
-  text-shadow: 0 0 1rem #000000;
+  text-shadow: 0 0 .5rem #000000;
 }
 
 .Text {

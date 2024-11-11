@@ -28,7 +28,7 @@ const props = defineProps<{
 </template>
 
 <style lang="scss" scoped>
-.Container{
+.Container {
   position: relative;
   padding-block: .4rem;
 }
