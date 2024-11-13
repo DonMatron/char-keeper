@@ -1,21 +1,8 @@
 import { defineStore, createPinia } from 'pinia'
+import type CharacterInfo from './models/Characterinfo';
 const pinia = createPinia();
 
 //const GoogleDrivePreviewLink = "https://drive.google.com/thumbnail?id=180eFQ9pYj42Ot_f8DflZ_7Sas4Zd0K6V";
-
-interface CharacterInfo {
-  name: string,
-  image?: string,
-  ac: number,
-  initiative: number,
-  proficiency: number,
-  speed: number,
-  darkvision: number,
-  inspirations: number,
-  currentHp: number,
-  maxHp: number,
-  tempHp: number
-}
 
 const character: CharacterInfo = {
   name: "Dark Urge",
@@ -29,7 +16,13 @@ const character: CharacterInfo = {
   inspirations: 3,
   currentHp: 999,
   maxHp: 999,
-  tempHp: 0
+  tempHp: 0,
+  conditions: [
+
+  ],
+  defenses: [
+
+  ]
 };
 
 export const useCharacterStore = defineStore({
