@@ -1,5 +1,5 @@
 import { defineStore, createPinia } from 'pinia'
-import type CharacterInfo from './models/Characterinfo';
+import type CharacterInfo from './models/CharacterInfo';
 const pinia = createPinia();
 
 //const GoogleDrivePreviewLink = "https://drive.google.com/thumbnail?id=180eFQ9pYj42Ot_f8DflZ_7Sas4Zd0K6V";

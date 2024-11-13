@@ -4,7 +4,7 @@ import HomeDashboardBadge from './HomeDashboardBadge.vue';
 import HomeDashboardHp from './HomeDashboardHp.vue';
 import HomeDashboardConditions from './HomeDashboardConditions.vue';
 import { useCharacterStore } from '../store.js';
-import { BadgeIcons } from '../assets/BadgeAssets';
+import { BadgeIcons } from '../assets/badge/BadgeAssets';
 
 const character = useCharacterStore();
 

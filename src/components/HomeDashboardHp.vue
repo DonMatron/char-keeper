@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
   <div class="Container">
     <div class="Slash BigText">/</div>
-    <div class="Text">Health Points</div>
+    <div class="ContainerHeading">Health Points</div>
     <div class="HpBlock">
       <div class="HpCol Current">
         <div class="BigText">{{ props.current }}</div>
@@ -39,6 +39,14 @@ const props = defineProps<{
   top: 3.3rem;
   transform: translate(-50%, -50%);
   font-weight: 600;
+}
+
+.ContainerHeading {
+  font-family: Oswald;
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.1rem;
+  user-select: none;
 }
 
 .Text {
