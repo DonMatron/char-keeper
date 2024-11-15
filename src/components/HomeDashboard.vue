@@ -3,7 +3,7 @@ import HomeDashboardImage from './HomeDashboardImage.vue';
 import HomeDashboardBadge from './HomeDashboardBadge.vue';
 import HomeDashboardHp from './HomeDashboardHp.vue';
 import HomeDashboardConditions from './HomeDashboardDefCond.vue';
-import { useCharacterStore } from '../store.js';
+import { useCharacterStore } from '../store';
 import { BadgeIcons } from '../assets/badge/BadgeAssets';
 import { useI18n } from 'vue-i18n';
 
