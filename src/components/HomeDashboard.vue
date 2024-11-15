@@ -5,43 +5,46 @@ import HomeDashboardHp from './HomeDashboardHp.vue';
 import HomeDashboardConditions from './HomeDashboardConditions.vue';
 import { useCharacterStore } from '../store.js';
 import { BadgeIcons } from '../assets/badge/BadgeAssets';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 const character = useCharacterStore();
 
 const badges = [
   {
     class: "Ac",
-    text: "AC",
+    text: t('ac'),
     value: character.ac.toString(),
     image: BadgeIcons.Ac
   },
   {
     class: "Initiative",
-    text: "Initiative",
+    text: t('initiative'),
     value: character.initiative.toString(),
     image: BadgeIcons.Initiative
   },
   {
     class: "Proficiency",
-    text: "Proficiency",
+    text: t('proficiency'),
     value: character.proficiency.toString(),
     image: BadgeIcons.Proficiency
   },
   {
     class: "Speed",
-    text: "Speed",
+    text: t('speed'),
     value: character.speed.toString(),
     image: BadgeIcons.Speed
   },
   {
     class: "Darkvision",
-    text: "Darkvision",
+    text: t('darkvision'),
     value: character.darkvision.toString(),
     image: BadgeIcons.Darkvision
   },
   {
     class: "Inspirations",
-    text: "Inspirations",
+    text: t('inspirations'),
     value: character.inspirations.toString(),
     image: BadgeIcons.Inspirations
   }
@@ -54,7 +57,7 @@ const badges = [
     <HomeDashboardImage :name="character.name" :image="character.image" />
     <div class="BadgesGrid">
       <div v-for="badge in badges" :key="badge.class">
-        <HomeDashboardBadge :class="badge.class" :text="badge.class" :value="badge.value" :image="badge.image" />
+        <HomeDashboardBadge :class="badge.class" :text="badge.text" :value="badge.value" :image="badge.image" />
       </div>
     </div>
     <HomeDashboardHp :current="character.currentHp" :maximal="character.maxHp" :temporary="character.tempHp" />

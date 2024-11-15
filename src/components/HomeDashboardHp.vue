@@ -8,21 +8,28 @@ const props = defineProps<{
 
 <template>
   <div class="Container">
-    <div class="Slash BigText">/</div>
-    <div class="ContainerHeading">Health Points</div>
+
+    <div class="ContainerHeading">{{ $t('hp') }}</div>
+
     <div class="HpBlock">
+
       <div class="HpCol Current">
-        <div class="BigText">{{ props.current }}</div>
-        <div class="Text">Current</div>
+        <div class="BigText">{{ props.current }}
+        </div>
+
+        <div class="Text">{{ $t('current') }}</div>
       </div>
+
       <div class="HpCol Max">
         <div class="BigText">{{ props.maximal }}</div>
-        <div class="Text">Max</div>
+        <div class="Text">{{ $t('max') }}</div>
       </div>
+
       <div class="HpCol Temp">
         <div class="BigText">{{ props.temporary }}</div>
-        <div class="Text">Temporary</div>
+        <div class="Text">{{ $t('temporary') }}</div>
       </div>
+
     </div>
   </div>
 </template>
@@ -34,11 +41,9 @@ const props = defineProps<{
 }
 
 .Slash {
-  position: absolute;
-  left: 33%;
-  top: 3.3rem;
-  transform: translate(-50%, -50%);
-  font-weight: 600;
+  position: relative;
+  width: 0;
+  left: .1rem;
 }
 
 .ContainerHeading {
@@ -63,6 +68,7 @@ const props = defineProps<{
   font-weight: 600;
   text-align: center;
   font-size: 1.4rem;
+  text-wrap: nowrap;
 }
 
 .HpBlock {

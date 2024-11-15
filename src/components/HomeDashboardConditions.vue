@@ -9,12 +9,12 @@ import Divider from 'primevue/divider';
 
 <template>
   <div class="Container">
-    <div class="ContainerHeading">Defenses</div>
+    <div class="ContainerHeading">{{ $t('defenses') }}</div>
     <div class="Defenses">
 
     </div>
     <Divider />
-    <div class="ContainerHeading">Conditions</div>
+    <div class="ContainerHeading">{{ $t('conditions') }}</div>
     <div class="Conditions">
 
     </div>

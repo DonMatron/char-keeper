@@ -1,0 +1,14 @@
+{
+  "ac": "AC",
+  "initiative": "Initiative",
+  "proficiency": "Proficiency",
+  "speed": "Speed",
+  "darkvision": "Darkvision",
+  "inspirations": "Inspirations",
+  "hp": "Health Points",
+  "current": "Current",
+  "max": "Max",
+  "temporary": "Temporary",
+  "defenses": "Defenses",
+  "conditions": "Conditions"
+}
