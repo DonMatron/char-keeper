@@ -9,8 +9,7 @@ const props = defineProps<{
 <template>
   <div class="CharacterImage Container">
     <img v-if="props.image" :src="image!" />
-    <div v-else class="Alternative"> Here should've been your beautiful character pic, but something didn't work out :(
-    </div>
+    <div v-else class="Alternative"> Here should've been your beautiful character pic, but something didn't work out :(</div>
     <h1 class="Text">{{ props.name }}</h1>
   </div>
 </template>
@@ -50,10 +49,8 @@ const props = defineProps<{
   }
 
   .Text {
-    font-family: Oswald;
-    text-shadow: 0 0 0.4em #000000;
+    text-shadow: var(--text-shadow);
     text-align: left;
-    font-size: 2rem;
     padding: .2rem .8rem;
   }
 }

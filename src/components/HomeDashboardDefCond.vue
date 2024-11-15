@@ -9,15 +9,13 @@ import Divider from 'primevue/divider';
 
 <template>
   <div class="Container">
-    <div class="ContainerHeading">{{ $t('defenses') }}</div>
-    <div class="Defenses">
+    <h3>{{ $t('defenses') }}</h3>
+    <div class="Collection"></div>
 
-    </div>
     <Divider />
-    <div class="ContainerHeading">{{ $t('conditions') }}</div>
-    <div class="Conditions">
 
-    </div>
+    <h3>{{ $t('conditions') }}</h3>
+    <div class="Collection"></div>
   </div>
 </template>
 
@@ -26,29 +24,14 @@ import Divider from 'primevue/divider';
   display: flex;
   flex-direction: column;
   align-items: stretch;
-}
-
-.Defenses {
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.Conditions {
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.ContainerHeading {
-  font-family: Oswald;
-  font-weight: 500;
   text-align: center;
-  font-size: 1.1rem;
-  user-select: none;
+}
+
+.Collection {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 </style>

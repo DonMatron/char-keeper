@@ -9,8 +9,8 @@ const props = defineProps<{
 <template>
   <div class="Badge Container">
     <img v-if="props.image" :src="image!" />
-    <div class="Value">{{ props.value }}</div>
-    <div class="Text">{{ props.text }}</div>
+    <h1 class="Value">{{ props.value }}</h1>
+    <div class="SecondaryText">{{ props.text }}</div>
   </div>
 </template>
 
@@ -19,6 +19,7 @@ const props = defineProps<{
   overflow: hidden;
   position: relative;
   padding: .4rem;
+  text-align: center;
 }
 
 img {
@@ -35,19 +36,6 @@ img {
 }
 
 .Value {
-  font-family: Oswald;
-  font-weight: 600;
-  text-align: center;
-  font-size: 2rem;
-  text-shadow: 0 0 .5rem #000000;
-}
-
-.Text {
-  font-family: Oswald;
-  font-weight: 400;
-  text-align: center;
-  font-size: 1rem;
-  color: #bababa;
-  text-shadow: 0 0 1rem #000000;
+  text-shadow: var(--text-shadow);
 }
 </style>

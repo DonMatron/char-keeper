@@ -9,25 +9,23 @@ const props = defineProps<{
 <template>
   <div class="Container">
 
-    <div class="ContainerHeading">{{ $t('hp') }}</div>
+    <h3>{{ $t('hp') }}</h3>
 
     <div class="HpBlock">
 
       <div class="HpCol Current">
-        <div class="BigText">{{ props.current }}
-        </div>
-
-        <div class="Text">{{ $t('current') }}</div>
+        <h2>{{ props.current }}</h2>
+        <div class="SecondaryText">{{ $t('current') }}</div>
       </div>
 
       <div class="HpCol Max">
-        <div class="BigText">{{ props.maximal }}</div>
-        <div class="Text">{{ $t('max') }}</div>
+        <h2>{{ props.maximal }}</h2>
+        <div class="SecondaryText">{{ $t('max') }}</div>
       </div>
 
       <div class="HpCol Temp">
-        <div class="BigText">{{ props.temporary }}</div>
-        <div class="Text">{{ $t('temporary') }}</div>
+        <h2>{{ props.temporary }}</h2>
+        <div class="SecondaryText">{{ $t('temporary') }}</div>
       </div>
 
     </div>
@@ -38,60 +36,33 @@ const props = defineProps<{
 .Container {
   position: relative;
   padding-block: .4rem;
-}
-
-.Slash {
-  position: relative;
-  width: 0;
-  left: .1rem;
-}
-
-.ContainerHeading {
-  font-family: Oswald;
-  font-weight: 500;
   text-align: center;
-  font-size: 1.1rem;
-  user-select: none;
-}
 
-.Text {
-  font-family: Oswald;
-  font-weight: 400;
-  text-align: center;
-  font-size: 1rem;
-  color: #bababa;
-  user-select: none;
-}
-
-.BigText {
-  font-family: Oswald;
-  font-weight: 600;
-  text-align: center;
-  font-size: 1.4rem;
-  text-wrap: nowrap;
+  h3 {
+    margin-bottom: .4rem;
+  }
 }
 
 .HpBlock {
   display: flex;
   align-items: stretch;
-  margin-top: .2rem;
-}
 
-.HpCol {
-  div {
-    margin-top: .2rem;
+  .HpCol {
+    div {
+      margin-top: .2rem;
+    }
   }
-}
 
-.Current {
-  flex-basis: 30%;
-}
+  .Current {
+    flex-basis: 30%;
+  }
 
-.Max {
-  flex-basis: 40%;
-}
+  .Max {
+    flex-basis: 40%;
+  }
 
-.Temp {
-  flex-basis: 30%;
+  .Temp {
+    flex-basis: 30%;
+  }
 }
 </style>

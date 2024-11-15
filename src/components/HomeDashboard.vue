@@ -2,7 +2,7 @@
 import HomeDashboardImage from './HomeDashboardImage.vue';
 import HomeDashboardBadge from './HomeDashboardBadge.vue';
 import HomeDashboardHp from './HomeDashboardHp.vue';
-import HomeDashboardConditions from './HomeDashboardConditions.vue';
+import HomeDashboardConditions from './HomeDashboardDefCond.vue';
 import { useCharacterStore } from '../store.js';
 import { BadgeIcons } from '../assets/badge/BadgeAssets';
 import { useI18n } from 'vue-i18n';
@@ -61,7 +61,7 @@ const badges = [
       </div>
     </div>
     <HomeDashboardHp :current="character.currentHp" :maximal="character.maxHp" :temporary="character.tempHp" />
-    <HomeDashboardConditions />
+    <HomeDashboardConditions class="DefCond" />
   </div>
 </template>
 
@@ -71,16 +71,12 @@ const badges = [
   display: flex;
   flex-direction: column;
 
-  >* {
-    margin-top: 1rem;
-  }
-
   >*:first-of-type {
     margin-top: 0;
   }
 
-  > :last-of-type {
-    flex-grow: 1;
+  >* {
+    margin-top: 1rem;
   }
 }
 
@@ -91,35 +87,39 @@ const badges = [
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
+
+  .Ac {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .Initiative {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .Proficiency {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .Speed {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .Darkvision {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .Inspirations {
+    grid-column: 2;
+    grid-row: 3;
+  }
 }
 
-.Ac {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.Initiative {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.Proficiency {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-.Speed {
-  grid-column: 2;
-  grid-row: 2;
-}
-
-.Darkvision {
-  grid-column: 1;
-  grid-row: 3;
-}
-
-.Inspirations {
-  grid-column: 2;
-  grid-row: 3;
+.DefCond {
+  flex-grow: 1;
 }
 </style>
