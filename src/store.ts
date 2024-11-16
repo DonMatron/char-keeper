@@ -27,10 +27,16 @@ const character: CharacterInfo = {
 
 export const useCharacterStore = defineStore({
   id: "character",
-  state: () => character,
-  actions: {
-    actionName() {
-      //do something
+  state: () => character
+});
+
+export const useModeStore = defineStore({
+  id: "mode",
+  state: () =>{
+    return {
+    single: 780,
+    double: 1080,
+    triple: 1600
     }
   }
 });

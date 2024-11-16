@@ -2,9 +2,12 @@
 import { useBreakpoint } from '../hooks/UseBreakpoint';
 import HomeDashboard from '../components/HomeDashboard.vue';
 import HomeTabs from '../components/HomeTabs.vue';
+import { useModeStore } from '../store';
 
-const isDoubleMode = useBreakpoint(import.meta.env.VITE_DOUBLE_MODE);
-const isTripleMode = useBreakpoint(import.meta.env.VITE_TRIPLE_MODE);
+const mode = useModeStore();
+
+ const isDoubleMode = useBreakpoint(mode.double);
+ const isTripleMode = useBreakpoint(mode.triple);
 
 </script>
 
