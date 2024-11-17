@@ -9,17 +9,19 @@ coverage
 *.suo
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
 .vs
 
 # Tauri
 src-tauri/target
 src-tauri/gen
-src-tauri/target/
-src-tauri/pkg/
+src-tauri/target
+src-tauri/pkg
 src-tauri/tauri-build.log
 src-tauri/Cargo.lock
+
+#Dotnet
+src-dotnet/DndHelper.TauriPlugIn/obj
 
 #Project specific
 storage

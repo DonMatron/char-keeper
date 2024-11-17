@@ -6,8 +6,8 @@
   "build": {
     "frontendDist": "../dist",
     "devUrl": "http://localhost:5173",
-    "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run build"
+    "beforeDevCommand": "dotnet build src-dotnet/src-dotnet.sln && npm run dev",
+    "beforeBuildCommand": "dotnet build -c Release src-dotnet/src-dotnet.sln && npm run build"
   },
   "app": {
     "windows": [
