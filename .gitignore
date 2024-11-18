@@ -21,7 +21,7 @@ src-tauri/tauri-build.log
 src-tauri/Cargo.lock
 
 #Dotnet
-src-dotnet/DndHelper.TauriPlugIn/obj
+src-dotnet/CharKeeper.TauriPlugIn/obj
 
 #Project specific
 storage

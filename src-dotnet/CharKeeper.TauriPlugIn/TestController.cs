@@ -1,4 +1,4 @@
-﻿namespace DndHelper.TauriPlugIn;
+﻿namespace CharKeeper.TauriPlugIn;
 
 using static System.Environment;
 
@@ -10,18 +10,15 @@ public class SomeModel
 
 public class TestController
 {
-  private static readonly string Store = Path.Combine(GetFolderPath(SpecialFolder.Personal), "DndHelper");
+  private static readonly string Store = Path.Combine(GetFolderPath(SpecialFolder.Desktop), "CharKeeper");
 
-  public TestController()
+  public SomeModel Save(SomeModel model)
   {
     if(!Directory.Exists(Store))
     {
       Directory.CreateDirectory(Store);
     }
-  }
 
-  public SomeModel Save(SomeModel model)
-  {
     File.WriteAllText(Path.Combine(Store, model.Id + ".txt"), model.Text);
     return model;
   }

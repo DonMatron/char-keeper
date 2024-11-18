@@ -1,4 +1,4 @@
-namespace DndHelper.TauriPlugIn;
+namespace CharKeeper.TauriPlugIn;
 
 using Microsoft.Extensions.DependencyInjection;
 using TauriDotNetBridge.Contracts;
