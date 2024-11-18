@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <OutputPath>..\..\src-tauri\target\$(Configuration)\dotnet</OutputPath>
+    <OutputPath>..\..\output\tauri\$(Configuration)\dotnet</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 

@@ -1,5 +1,5 @@
 node_modules
-dist
+output
 dist-ssr
 coverage
 
@@ -19,6 +19,8 @@ src-tauri/target
 src-tauri/pkg
 src-tauri/tauri-build.log
 src-tauri/Cargo.lock
+src-tauri/.cargo/*
+!src-tauri/.cargo/config.toml
 
 #Dotnet
 src-dotnet/CharKeeper.TauriPlugIn/obj

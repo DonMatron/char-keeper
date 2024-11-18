@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "identifier": "CharKeeper",
   "build": {
-    "frontendDist": "../dist",
+    "frontendDist": "../output/vue",
     "devUrl": "http://localhost:5173",
     "beforeDevCommand": "dotnet build src-dotnet/src-dotnet.sln && npm run dev",
     "beforeBuildCommand": "dotnet build -c Release src-dotnet/src-dotnet.sln && npm run build"

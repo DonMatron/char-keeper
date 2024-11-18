@@ -23,5 +23,8 @@ export default defineConfig({
         api: 'modern',
       }
     }
+  },
+  build:{
+    outDir: './output/vue'
   }
 })
