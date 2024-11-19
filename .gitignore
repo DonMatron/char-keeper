@@ -27,3 +27,4 @@ src-dotnet/CharKeeper.TauriPlugIn/obj
 
 #Project specific
 storage
+src-tauri/dotnet
