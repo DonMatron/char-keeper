@@ -15,6 +15,7 @@
         "title": "Char Keeper",
         "width": 800,
         "height": 600,
+        "backgroundColor": "#0a090f",
         "resizable": true,
         "fullscreen": false,
         "center": true
@@ -28,11 +29,10 @@
     "active": true,
     "targets": "nsis",
     "icon": [
-      "icons/32x32.png",
-      "icons/128x128.png",
-      "icons/128x128@2x.png",
-      "icons/icon.icns",
-      "icons/icon.ico"
+      "../public/32x32.png",
+      "../public/128x128.png",
+      "../public/128x128@2x.png",
+      "../public/icon.ico"
     ],
     "resources": [
       "dotnet"
