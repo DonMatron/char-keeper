@@ -1,29 +1,29 @@
 <script setup lang="ts">
 import { Api } from '../api/client';
+import { ref } from 'vue';
 
 interface SomeModel {
-  Id: string;
-  Text: string;
+  id: string;
+  text: string;
 }
 
-async function onSearchInput() {
-  console.log('Requesting...');
+const model = ref<SomeModel>();
 
-  let res = await Api.invokePlugin<SomeModel>({
+async function onTestApi() {
+  model.value = await Api.invokePlugin<SomeModel>({
     controller: 'Test',
     action: 'Save',
-    data: { id: "Specified Id", text: "Some text here" }
-  });
-
-  console.log('Result:');
-  console.log(res);
+    data: { id: (Math.floor(Math.random() * (100 - 0 + 1)) + 0).toString(), text: "Some static text here" }
+  }) ?? undefined;
 };
 </script>
 
 <template>
   <div class="Container Tabs">
     <h1 class="Text">Tabs</h1>
-    <button @click="onSearchInput">Test API</button>
+    <button @click="onTestApi">Test API</button>
+    <div v-if="model">Id: {{ model?.id }}</div>
+    <div v-if="model">Text: {{ model?.text }}</div>
   </div>
 </template>
 
