@@ -6,8 +6,8 @@ import { useModeStore } from '../store';
 
 const mode = useModeStore();
 
- const isDoubleMode = useBreakpoint(mode.double);
- const isTripleMode = useBreakpoint(mode.triple);
+const isDoubleMode = useBreakpoint(mode.double);
+const isTripleMode = useBreakpoint(mode.triple);
 
 </script>
 
@@ -38,13 +38,11 @@ h1 {
 }
 
 main {
-  //Common styling
   height: 100vh;
   width: 100vw;
   padding: 1rem;
   overflow: hidden;
 
-  //Smooth transitions
   .v-enter-active,
   .v-leave-active {
     transition: opacity .3s ease;
@@ -55,14 +53,11 @@ main {
     opacity: 0;
   }
 
-  //Flexbox
   display: flex;
-  justify-content: space-between;
   align-items: stretch;
-  align-content: flex-end;
+  gap: 1rem;
 }
 
-//Main flexbox child elements
 .Left {
   flex-basis: 20%;
   flex-grow: 1;
@@ -72,26 +67,19 @@ main {
   flex-basis: 50%;
   flex-grow: 2;
 
-  margin-left: 1rem;
-
-  //Flexbox
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  gap: 1rem;
+
+  .Tabs {
+    flex-basis: 100%;
+  }
 }
 
 .Right {
   flex-basis: 20%;
   flex-grow: 1;
 
-  margin-left: 1rem;
-}
-
-//Middle flexbox child elements
-
-.Tabs {
-  flex-basis: 100%;
-
-  margin-left: 1rem;
 }
 </style>

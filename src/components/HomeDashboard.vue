@@ -67,21 +67,20 @@ const badges = [
 
 <style lang="scss" scoped>
 .Dashboard {
-  width: var(--dashboard-width);
+  flex-basis: var(--dashboard-width);
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+  border-radius: 1rem;
+  overflow-y: scroll;
 
-  >*:first-of-type {
-    margin-top: 0;
-  }
-
-  >* {
-    margin-top: 1rem;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
 .BadgesGrid {
-  width: var(--dashboard-width);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);

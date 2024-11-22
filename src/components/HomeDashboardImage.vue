@@ -9,7 +9,7 @@ const props = defineProps<{
 <template>
   <div class="CharacterImage Container">
     <img v-if="props.image" :src="image!" />
-    <div v-else class="Alternative"> Here should've been your beautiful character pic, but something didn't work out :(</div>
+    <div v-else class="Alternative SecondaryText"> Here should've been your beautiful character pic, but something didn't work out.</div>
     <h1 class="Text">{{ props.name }}</h1>
   </div>
 </template>
@@ -20,7 +20,8 @@ const props = defineProps<{
   overflow: hidden;
   position: relative;
   width: var(--dashboard-width);
-  height: var(--dashboard-width);
+  height: calc(var(--dashboard-width) / 1.2);
+  flex-shrink: 0;
 
   //Moves text to bottom
   display: flex;
@@ -38,20 +39,19 @@ const props = defineProps<{
   }
 
   .Alternative {
-    pointer-events: none;
-    position: absolute;
-    height: 100%;
-    padding: 1rem;
+    flex-grow: 1;
     text-align: center;
     display: flex;
     align-items: center;
     opacity: .2;
+    font-family: Nunito;
+    font-size: .8rem;
   }
 
   .Text {
     text-shadow: var(--text-shadow);
     text-align: left;
-    padding: .2rem .8rem;
+    padding: 0 .8rem .2rem .8rem;
   }
 }
 </style>

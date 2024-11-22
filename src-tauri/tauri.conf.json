@@ -13,8 +13,10 @@
     "windows": [
       {
         "title": "Char Keeper",
-        "width": 800,
-        "height": 600,
+        "width": 650,
+        "height": 628,
+        "minWidth": 650,
+        "minHeight": 628,
         "backgroundColor": "#0a090f",
         "resizable": true,
         "fullscreen": false,
