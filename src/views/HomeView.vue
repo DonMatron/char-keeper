@@ -44,15 +44,34 @@ main {
   width: 100vw;
   padding: 1rem;
   overflow: hidden;
+  position: relative;
 
+  .v-move,
   .v-enter-active,
   .v-leave-active {
-    transition: opacity .3s ease;
+    transition: all .3s ease;
   }
 
   .v-enter-from,
   .v-leave-to {
     opacity: 0;
+
+    &.Left {
+      transform: translateX(-200px);
+    }
+
+    &.Right {
+      transform: translateX(200px);
+    }
+  }
+
+  .v-leave-active {
+    position: absolute;
+    height: calc(100vh - 2rem);
+
+    &.Right {
+      right: 0;
+    }
   }
 
   display: flex;
