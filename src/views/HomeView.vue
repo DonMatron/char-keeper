@@ -2,6 +2,8 @@
 import { useBreakpoint } from '../hooks/UseBreakpoint';
 import HomeDashboard from '../components/HomeDashboard.vue';
 import HomeTabs from '../components/HomeTabs.vue';
+import HomeLeft from '../components/HomeLeft.vue';
+import HomeRight from '../components/HomeRight.vue';
 import { useModeStore } from '../store';
 
 const mode = useModeStore();
@@ -16,7 +18,7 @@ const isTripleMode = useBreakpoint(mode.triple);
     <TransitionGroup>
 
       <div v-if="isDoubleMode" class="Container Left" key="left">
-        <h1>Left</h1>
+        <HomeLeft />
       </div>
 
       <div class="Middle" key="middle">
@@ -25,7 +27,7 @@ const isTripleMode = useBreakpoint(mode.triple);
       </div>
 
       <div v-if="isTripleMode" class="Container Right" key="right">
-        <h1>Right</h1>
+        <HomeRight />
       </div>
 
     </TransitionGroup>
@@ -59,27 +61,26 @@ main {
 }
 
 .Left {
-  flex-basis: 20%;
-  flex-grow: 1;
+  flex: 1 0 0;
+  overflow-x: hidden;
 }
 
 .Middle {
-  flex-basis: 50%;
-  flex-grow: 2;
-
+  flex: 2 0 0;
+  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   align-items: stretch;
   gap: 1rem;
 
   .Tabs {
-    flex-basis: 100%;
+    flex: 1 0 0;
+    overflow: hidden;
   }
 }
 
 .Right {
-  flex-basis: 20%;
-  flex-grow: 1;
-
+  flex: 1 0 0;
+  overflow-x: hidden;
 }
 </style>

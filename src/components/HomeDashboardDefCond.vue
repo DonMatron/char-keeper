@@ -25,6 +25,7 @@ import Divider from 'primevue/divider';
   flex-direction: column;
   align-items: stretch;
   text-align: center;
+  padding: 1rem;
 }
 
 .Collection {

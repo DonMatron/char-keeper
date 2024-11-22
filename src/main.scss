@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 
-:root {
-  --text-main-color: #EADADA;
-  --text-secondary-color: #BABABA;
-  --text-shadow: 0 0 0.4em #000000;
-  --gradient-background: linear-gradient(160deg, #242328 -20%, #0a090f 90%);
-
-  --dashboard-width: 12rem;
-}
-
 *,
 *::before,
 *::after {
@@ -16,21 +7,35 @@
   margin: 0;
 }
 
-body {
+:root {
+  --text-shadow: 0 0 0.4em #000000;
+  --dashboard-width: 12rem;
+
   font-family: Oswald;
-  color: var(--text-color);
-  background: var(--gradient-background);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--p-surface-100);
+  background: #131313;
 }
 
 .Container {
-  background: #ffffff05;
-  padding: 1rem;
+  background-color: var(--p-surface-900);
+  padding: 0 1rem 1rem 1rem;
   border: .1rem solid #ffffff07;
   border-radius: 1rem;
 }
+
+.SecondaryText{
+  color: var(--text-secondary-color);
+}
+
+//PrimeVue overrides
+
+.p-tab{
+  font-size: 2rem;
+  flex-grow: 1;
+  text-align: start;
+}
+
+//Common overrides
 
 h1{
   font-weight: 700;
@@ -44,6 +49,7 @@ h3{
   font-weight: 400;
 }
 
-.SecondaryText{
-  color: var(--text-secondary-color);
+button {
+  font-family: inherit;
+  font-size: inherit;
 }

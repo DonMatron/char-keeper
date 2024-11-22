@@ -30,7 +30,6 @@ const props = defineProps<{
   align-items: stretch;
 
   img {
-    z-index: -1;
     position: absolute;
     display: block;
     object-fit: cover;
@@ -49,6 +48,7 @@ const props = defineProps<{
   }
 
   .Text {
+    z-index: 1;
     text-shadow: var(--text-shadow);
     text-align: left;
     padding: 0 .8rem .2rem .8rem;

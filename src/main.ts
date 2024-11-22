@@ -3,11 +3,11 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import PrimeVue from 'primevue/config';
-import Aura from '@primevue/themes/aura';
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n'
 import en from './locales/en.json';
 import ua from './locales/ua.json';
+import { MyPreset } from './styles/themes';
 
 const app = createApp(App);
 
@@ -32,7 +32,7 @@ app.use(router);
 
 app.use(PrimeVue, {
   theme: {
-    preset: Aura
+    preset: MyPreset
   }
 });
 
