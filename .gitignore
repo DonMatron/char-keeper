@@ -23,7 +23,8 @@ src-tauri/.cargo/*
 !src-tauri/.cargo/config.toml
 
 #Dotnet
-src-dotnet/CharKeeper.TauriPlugIn/obj
+bin
+obj
 
 #Project specific
 storage
