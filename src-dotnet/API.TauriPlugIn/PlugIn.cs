@@ -1,4 +1,4 @@
-namespace TauriPlugIn;
+namespace API.TauriPlugIn;
 
 using Microsoft.Extensions.DependencyInjection;
 using TauriDotNetBridge.Contracts;

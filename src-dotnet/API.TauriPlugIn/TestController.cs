@@ -1,13 +1,13 @@
-﻿namespace TauriPlugIn;
+﻿namespace API.TauriPlugIn;
 
-using Domain;
+using API.DTOs;
 using static System.Environment;
 
 public class TestController
 {
     private static readonly string Store = Path.Combine(GetFolderPath(SpecialFolder.Desktop), "CharKeeper");
 
-    public SomeModel Save(SomeModel model)
+    public SomeDto Save(SomeDto model)
     {
         if (!Directory.Exists(Store))
         {

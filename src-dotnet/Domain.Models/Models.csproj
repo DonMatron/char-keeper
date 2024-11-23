@@ -7,15 +7,10 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <OutputPath>..\..\output\tauri\$(Configuration)\dotnet</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <RootNamespace>Domain.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec
-      Command="mkdir &quot;$(SolutionDir)..\src-tauri\dotnet\&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)..\src-tauri\dotnet\&quot;" />
+    <Exec Command="mkdir &quot;$(SolutionDir)..\src-tauri\dotnet\&quot;&#xD;&#xA;copy /Y &quot;$(TargetDir)*&quot; &quot;$(SolutionDir)..\src-tauri\dotnet\&quot;" />
   </Target>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Data.Domain\Domain.csproj" />
-  </ItemGroup>
-
 </Project>
