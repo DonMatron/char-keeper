@@ -7,7 +7,7 @@
     "frontendDist": "../output/vue",
     "devUrl": "http://localhost:5173",
     "beforeDevCommand": "dotnet build src-dotnet/CharKeeper.sln && npm run dev",
-    "beforeBuildCommand": "dotnet build -c Release src-dotnet/CharKeeper.sln && npm run build"
+    "beforeBuildCommand": "dotnet build -c Release src-dotnet/CharKeeper.sln && cmd /c src-tauri\\copyDotnetReleaseBuild.bat && npm run build"
   },
   "app": {
     "windows": [
